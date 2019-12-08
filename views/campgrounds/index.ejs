@@ -1,0 +1,28 @@
+<% include ../partials/header %> 
+
+
+<div class = "container">
+	<div class = "jumbotron">
+		<header>
+		<h2>Check out all these campgrounds</h2>
+		<p>good stuff</p>
+		</header>
+		<a class = "btn btn-primary" href="/campgrounds/new">Click here to add a new Campground</a>
+ 	</div>
+
+	<div class = "row" style = "display:flex; flex-wrap: wrap">
+		<% campgrounds.forEach(function(campground){ %>
+		<div class = "col-sm-3 col-sm-6">
+			<div class = "thumbnail">
+				<img src="<%= campground.image %>" class = "img-fluid">
+				<div class = "caption">
+				<h4><%= campground.name %> </h4>
+			</div>
+			<a href="/campgrounds/<%=campground._id%>" class = "btn btn-primary">More Info</a>
+			</div>
+		</div>
+	<% }) %>
+	</div>
+</div>
+
+<% include ../partials/footer %>
