@@ -21,8 +21,8 @@ var commentRoutes = require('./routes/comments'),
 	campgroundRoutes = require('./routes/campgrounds'),
 	restRoutes = require('./routes/rest'); 
 
-mongoose.connect('mongodb://localhost:27017/yelp_camp', {useNewUrlParser: true , useUnifiedTopology: true }); 
-
+//mongoose.connect('mongodb://localhost:27017/yelp_camp', {useNewUrlParser: true , useUnifiedTopology: true }); 
+mongoose.connect('mongodb+srv://parthh01:fellaini@yelpcamp-dck2v.mongodb.net/test?retryWrites=true&w=majority')
 // seedDB(); 
 
 app.set("view engine", "ejs");
@@ -56,7 +56,7 @@ app.use("/campgrounds/:id/comments",commentRoutes);
 
 
 app.listen(process.env.PORT,function(){
-	console.log("YelpCamp app is listening on port 3000");
+	console.log("YelpCamp app is listening ");
 })
 
 //hosted on https://powerful-bastion-10323.herokuapp.com
