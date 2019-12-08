@@ -59,6 +59,7 @@ app.listen(process.env.PORT,function(){
 	console.log("YelpCamp app is listening on port 3000");
 })
 
+//hosted on https://powerful-bastion-10323.herokuapp.com
 
 
 
