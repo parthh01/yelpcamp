@@ -1,6 +1,7 @@
 var mongoose 	= require('mongoose'), 
 	Campground 	= require('./models/campgrounds'), 
-	Comment 	= require('./models/comments'); 
+	Comment 	= require('./models/comments'),
+	User 		= require('./models/users'); 
 
 var data = [ 
 	{ 
@@ -54,7 +55,9 @@ function SeedDB(){
 	// 		})
 	// 	}
 	 })
+
 }
+
 
 
 module.exports = SeedDB ; 
